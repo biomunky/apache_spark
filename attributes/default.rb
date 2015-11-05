@@ -92,3 +92,4 @@ default['apache_spark']['conf']['spark.executor.extraLibraryPath'] = '/usr/lib/h
 
 default['apache_spark']['standalone']['local_dirs'] = ['/var/local/spark']
 default['apache_spark']['standalone']['master_cmdline_pattern'] = '^.*java.* (org\.apache\.)?spark\.deploy\.master\.Master '
+default['apache_spark']['standalone']['worker_cmdline_pattern'] = '^.*java.* (org\.apache\.)?spark\.deploy\.worker\.Worker '
