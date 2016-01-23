@@ -116,7 +116,13 @@ template "#{spark_conf_dir}/spark-defaults.conf" do
   variables options: node['apache_spark']['conf'].to_hash.merge(
     'spark.driver.extraClassPath' => common_extra_classpath_items_str,
     'spark.executor.extraClassPath' => common_extra_classpath_items_str,
-    'spark.executor.memory' => "#{default_executor_mem_mb}m",
     'spark.local.dir' => local_dirs.join(',')
   )
+end
+
+template "#{spark_conf_dir}/core-site.xml" do
+  source 'core-site.xml.erb'
+  mode 0644
+  owner spark_user
+  group spark_group
 end
