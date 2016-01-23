@@ -90,6 +90,6 @@ default['apache_spark']['conf']['spark.akka.frameSize'] = 100
 default['apache_spark']['conf']['spark.deploy.spreadOut'] = true
 default['apache_spark']['conf']['spark.executor.extraLibraryPath'] = '/usr/lib/hadoop/lib/native'
 
-default['apache_spark']['standalone']['local_dirs'] = ['/var/local/spark']
+default['apache_spark']['standalone']['local_dirs'] = ['/tmp/']
 default['apache_spark']['standalone']['master_cmdline_pattern'] = '^.*java.* (org\.apache\.)?spark\.deploy\.master\.Master '
 default['apache_spark']['standalone']['worker_cmdline_pattern'] = '^.*java.* (org\.apache\.)?spark\.deploy\.worker\.Worker '
